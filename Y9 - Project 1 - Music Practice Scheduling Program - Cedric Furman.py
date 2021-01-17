@@ -68,6 +68,8 @@ def rangesFromLists(list1, list2):
 # This function takes a list, and for each value in that list, it converts it into 24-hour time, which is easier to use for calculations
 def alterEachInList(list1):
 	
+	index = 0
+	
 	# Each item in the list is altered
 	for item in list1:
 		
@@ -75,7 +77,9 @@ def alterEachInList(list1):
 		newItem = convert24HourTime(item)
 
 		# The current item in the list is reassigned as the new altered 24-hour time version of itself
-		item = newItem
+		list1[index] = newItem
+		
+		index += 1
 
 	return list1
 
